@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mohamed.simplenote.ViewNoteActivity">
+
+    <TextView
+        android:id="@+id/noteTitleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:inputType="textNoSuggestions"
+        android:textSize="22sp"
+        android:textColor="@color/textColorPrimary"
+        android:hint="Note Title"
+        android:gravity="center_vertical"
+        android:maxLength="50"
+        android:scrollbars="horizontal"
+        android:padding="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="@color/colorDivider" />
+
+    <TextView
+        android:id="@+id/noteContentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="20sp"
+        android:textColor="@color/textColorPrimary"
+        android:hint="Note Contnet"
+        android:gravity="top|left"
+        android:maxLength="500"
+        android:scrollbars="vertical"
+        android:padding="20dp" />
+
+</LinearLayout>
