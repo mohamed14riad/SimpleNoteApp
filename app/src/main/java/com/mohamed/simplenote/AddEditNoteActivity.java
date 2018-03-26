@@ -26,6 +26,8 @@ public class AddEditNoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_note);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         this.noteTitle = (EditText)this.findViewById(R.id.noteTitle);
         this.noteContent = (EditText)this.findViewById(R.id.noteContent);
 

@@ -18,6 +18,8 @@ public class ViewNoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_note);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         this.noteTitleView = (TextView) this.findViewById(R.id.noteTitleView);
         // make the TextView Scrolling
         this.noteTitleView.setMovementMethod(new ScrollingMovementMethod());

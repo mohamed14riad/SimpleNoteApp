@@ -3,6 +3,7 @@ package com.mohamed.simplenote;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     private ListView notesListView;
 
-    // ID for Menu items
+    // IDs for Menu items
     private static final int MENU_ITEM_VIEW = 111;
     private static final int MENU_ITEM_EDIT = 222;
     private static final int MENU_ITEM_DELETE = 333;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         MyDatabaseHelper db = new MyDatabaseHelper(MainActivity.this);
 
-        List<Note> list=  db.getAllNotes();
+        List<Note> list = db.getAllNotes();
         this.notesList.addAll(list);
 
         // Define a new Adapter
@@ -59,8 +60,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     @Override
-    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        final Note selectedNote = (Note) adapterView.getItemAtPosition(i);
+    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+        final Note selectedNote = (Note) adapterView.getItemAtPosition(position);
         Intent intent = new Intent(MainActivity.this, ViewNoteActivity.class);
         // Put Serializable Extra
         intent.putExtra("note", selectedNote);
@@ -75,16 +76,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.addNote: {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+            case R.id.addNote:
                 Intent intent = new Intent(MainActivity.this, AddEditNoteActivity.class);
                 // Start AddEditNoteActivity, (with feedback).
                 this.startActivityForResult(intent, MY_REQUEST_CODE);
-            }
-            break;
+                return true;
         }
-
-        return true;
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -93,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         menu.setHeaderTitle("Select The Action");
 
         // groupId, itemId, itemOrder, itemTitle
-        menu.add(0, MENU_ITEM_VIEW , 0, "View Note");
-        menu.add(0, MENU_ITEM_EDIT , 1, "Edit Note");
+        menu.add(0, MENU_ITEM_VIEW, 0, "View Note");
+        menu.add(0, MENU_ITEM_EDIT, 1, "Edit Note");
         menu.add(0, MENU_ITEM_DELETE, 2, "Delete Note");
     }
 
@@ -104,23 +107,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         final Note selectedNote = (Note) this.notesListView.getItemAtPosition(info.position);
 
-        if(item.getItemId() == MENU_ITEM_VIEW){
+        if (item.getItemId() == MENU_ITEM_VIEW) {
             Intent intent = new Intent(MainActivity.this, ViewNoteActivity.class);
             // Put Serializable Extra
             intent.putExtra("note", selectedNote);
             this.startActivity(intent);
-        }
-        else if(item.getItemId() == MENU_ITEM_EDIT ){
+        } else if (item.getItemId() == MENU_ITEM_EDIT) {
             Intent intent = new Intent(MainActivity.this, AddEditNoteActivity.class);
             // Put Serializable Extra
             intent.putExtra("note", selectedNote);
             // Start AddEditNoteActivity, (with feedback).
-            this.startActivityForResult(intent,MY_REQUEST_CODE);
-        }
-        else if(item.getItemId() == MENU_ITEM_DELETE){
+            this.startActivityForResult(intent, MY_REQUEST_CODE);
+        } else if (item.getItemId() == MENU_ITEM_DELETE) {
             // Ask before deleting.
             new AlertDialog.Builder(this)
-                    .setMessage("Are you sure you want to delete ?\n\n"+ selectedNote.getNoteTitle())
+                    .setMessage("Are you sure you want to delete ?\n\n" + selectedNote.getNoteTitle())
                     .setCancelable(false)
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
@@ -129,8 +130,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     })
                     .setNegativeButton("No", null)
                     .show();
-        }
-        else {
+        } else {
             return false;
         }
 
@@ -150,13 +150,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     // (If you start it using startActivityForResult ())
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode == Activity.RESULT_OK && requestCode == MY_REQUEST_CODE ) {
-            boolean needRefresh = data.getBooleanExtra("needRefresh",true);
+        if (resultCode == Activity.RESULT_OK && requestCode == MY_REQUEST_CODE) {
+            boolean needRefresh = data.getBooleanExtra("needRefresh", true);
             // Refresh ListView
-            if(needRefresh) {
+            if (needRefresh) {
                 this.notesList.clear();
                 MyDatabaseHelper db = new MyDatabaseHelper(this);
-                List<Note> list=  db.getAllNotes();
+                List<Note> list = db.getAllNotes();
                 this.notesList.addAll(list);
                 // Notify the data change (To refresh the ListView).
                 this.listViewAdapter.notifyDataSetChanged();
