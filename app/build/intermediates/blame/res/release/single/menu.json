@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\menu\\main_menu.xml",
+        "source": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\src\\main\\res\\menu\\main_menu.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\menu\\save_menu.xml",
+        "source": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\src\\main\\res\\menu\\save_menu.xml"
+    }
+]

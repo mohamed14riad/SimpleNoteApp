@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\ic_launcher.png",
+        "source": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi\\ic_launcher2.png",
+        "source": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher2.png"
+    }
+]

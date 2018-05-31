@@ -1,18 +1,34 @@
 [
     {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\5a25d52ebbb69ccca95d018f771247756e9f3533\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
         "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\ff8b80eb63ab778a034e6fb68dd4172cd1daed1f\\output\\res\\drawable-v21\\notification_action_background.xml"
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\719f232aa34e89d027898f8cdb91f2bacc1946e4\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\5a25d52ebbb69ccca95d018f771247756e9f3533\\output\\res\\drawable-v21\\design_password_eye.xml"
     },
     {
         "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\ff8b80eb63ab778a034e6fb68dd4172cd1daed1f\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
     },
     {
         "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\ff8b80eb63ab778a034e6fb68dd4172cd1daed1f\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
     },
     {
         "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\ff8b80eb63ab778a034e6fb68dd4172cd1daed1f\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\5a25d52ebbb69ccca95d018f771247756e9f3533\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\5a25d52ebbb69ccca95d018f771247756e9f3533\\output\\res\\drawable-v21\\avd_show_password.xml"
     }
 ]

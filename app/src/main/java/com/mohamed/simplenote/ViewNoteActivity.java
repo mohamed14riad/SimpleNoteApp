@@ -1,9 +1,8 @@
 package com.mohamed.simplenote;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class ViewNoteActivity extends AppCompatActivity {
@@ -20,18 +19,13 @@ public class ViewNoteActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        this.noteTitleView = (TextView) this.findViewById(R.id.noteTitleView);
-        // make the TextView Scrolling
-        this.noteTitleView.setMovementMethod(new ScrollingMovementMethod());
+        noteTitleView = (TextView) findViewById(R.id.noteTitleView);
+        noteContentView = (TextView) findViewById(R.id.noteContentView);
 
-        this.noteContentView = (TextView) this.findViewById(R.id.noteContentView);
-        // make the TextView Scrolling
-        this.noteContentView.setMovementMethod(new ScrollingMovementMethod());
-
-        Intent intent = this.getIntent();
-        this.note = (Note) intent.getSerializableExtra("note");
-        this.noteTitleView.setText(note.getNoteTitle());
-        this.noteContentView.setText(note.getNoteContent());
+        Intent intent = getIntent();
+        note = (Note) intent.getSerializableExtra("note");
+        noteTitleView.setText(note.getNoteTitle());
+        noteContentView.setText(note.getNoteContent());
     }
 
 }

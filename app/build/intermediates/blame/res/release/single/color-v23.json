@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_default.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_color_highlight_material.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\5a25d52ebbb69ccca95d018f771247756e9f3533\\output\\res\\color-v23\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\res\\merged\\release\\color-v23\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Mohamed Riad\\.android\\build-cache\\726311ba56f6cd0abf760476cc90faa5b15c7c66\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
+    }
+]

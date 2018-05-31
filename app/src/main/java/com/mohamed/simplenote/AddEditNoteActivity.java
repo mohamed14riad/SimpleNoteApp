@@ -2,11 +2,16 @@ package com.mohamed.simplenote;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class AddEditNoteActivity extends AppCompatActivity {
 
@@ -19,7 +24,7 @@ public class AddEditNoteActivity extends AppCompatActivity {
     private EditText noteTitle;
     private EditText noteContent;
 
-    private boolean needRefresh;
+    private boolean needRefresh = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,68 +33,72 @@ public class AddEditNoteActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        this.noteTitle = (EditText)this.findViewById(R.id.noteTitle);
-        this.noteContent = (EditText)this.findViewById(R.id.noteContent);
+        noteTitle = (EditText) findViewById(R.id.noteTitle);
+        noteContent = (EditText) findViewById(R.id.noteContent);
 
-        Intent intent = this.getIntent();
-        this.note = (Note) intent.getSerializableExtra("note");
-        if(note == null) {
-            this.mode = MODE_CREATE;
+        Intent intent = getIntent();
+        note = (Note) intent.getSerializableExtra("note");
+        if (note == null) {
+            mode = MODE_CREATE;
         } else {
-            this.mode = MODE_EDIT;
-            this.noteTitle.setText(note.getNoteTitle());
-            this.noteContent.setText(note.getNoteContent());
+            mode = MODE_EDIT;
+            noteTitle.setText(note.getNoteTitle());
+            noteContent.setText(note.getNoteContent());
         }
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.save_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.saveNote:
+                saveButtonClicked();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     // User Click on the Save button.
-    public void saveButtonClicked(View view)  {
-        MyDatabaseHelper db = new MyDatabaseHelper(this);
+    public void saveButtonClicked() {
+        DatabaseHelper db = new DatabaseHelper(this);
 
-        String title = this.noteTitle.getText().toString();
-        String content = this.noteContent.getText().toString();
+        String title = noteTitle.getText().toString();
+        String content = noteContent.getText().toString();
+        String date = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
 
-        if(title.isEmpty() || content.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Please enter title & content", Toast.LENGTH_SHORT).show();
+        if (title.isEmpty() || content.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please Enter Title & Content", Toast.LENGTH_LONG).show();
             return;
         }
 
-        if(mode==MODE_CREATE ) {
-            this.note= new Note(title,content);
+        if (mode == MODE_CREATE) {
+            note = new Note(title, content, date);
             db.addNote(note);
         } else {
-            this.note.setNoteTitle(title);
-            this.note.setNoteContent(content);
+            note.setNoteTitle(title);
+            note.setNoteContent(content);
+            note.setNoteDate(date);
             db.updateNote(note);
         }
 
-        this.needRefresh = true;
-
-        // Back to MainActivity.
-        this.onBackPressed();
-    }
-
-    // User Click on the Cancel button.
-    public void cancelButtonClicked(View view)  {
-        // Do nothing, back MainActivity.
-        this.onBackPressed();
-    }
-
-    // When completed this Activity,
-    // Send feedback to the Activity called it.
-    @Override
-    public void finish() {
+        needRefresh = true;
 
         // Create Intent
         Intent data = new Intent();
 
-        // Request MainActivity refresh its ListView (or not).
+        // Request MainActivity refresh its RecyclerView (or not).
         data.putExtra("needRefresh", needRefresh);
 
         // Set Result
-        this.setResult(Activity.RESULT_OK, data);
-        super.finish();
-    }
+        setResult(Activity.RESULT_OK, data);
 
+        // Back to MainActivity.
+        finish();
+    }
 }

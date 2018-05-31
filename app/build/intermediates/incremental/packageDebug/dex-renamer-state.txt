@@ -1,4 +1,4 @@
-#Mon Mar 26 19:36:19 EET 2018
+#Thu May 31 00:19:52 EET 2018
 base.0=D\:\\Lectures\\Courses\\Android projects\\SimpleNote\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_b30b8d6aaa4ecdccb5fd3cc79ce23ff1477cb20d
 renamed.1=classes.dex
 renamed.0=classes2.dex

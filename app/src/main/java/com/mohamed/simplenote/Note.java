@@ -8,14 +8,16 @@ public class Note implements Serializable {
     private int noteId;
     private String noteTitle;
     private String noteContent;
+    private String noteDate;
 
     public Note()  {
-        // empty constructor.
+
     }
 
-    public Note(String noteTitle, String noteContent) {
+    public Note(String noteTitle, String noteContent, String noteDate) {
         this.noteTitle = noteTitle;
         this.noteContent = noteContent;
+        this.noteDate = noteDate;
     }
 
     public int getNoteId() {
@@ -42,9 +44,11 @@ public class Note implements Serializable {
         this.noteContent = noteContent;
     }
 
-    @Override
-    public String toString() {
-        return this.noteTitle;
+    public String getNoteDate() {
+        return noteDate;
     }
 
+    public void setNoteDate(String noteDate) {
+        this.noteDate = noteDate;
+    }
 }
